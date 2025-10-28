@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .form-box {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 8px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* Apply the full-width form input styles to all inputs except checkboxes */
+    input:not([type="checkbox"]),
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    /* Checkbox container - keep checkbox inline with its label */
+    .checkbox {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    /* Make checkbox + label align nicely */
+    .checkbox label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    /* Ensure the checkbox itself keeps its native size */
+    .checkbox input[type="checkbox"] {
+      width: auto;
+      height: auto;
+      margin: 0;
+      display: inline-block;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-box">
+    <h2>Registration Form</h2>
+    <form>
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="fname" required>
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lname" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob">
+
+      <label for="country">Country</label>
+      <select id="country" name="country" required>
+        <option value="">Select</option>
+        <option>India</option>
+        <option>USA</option>
+        <option>UK</option>
+        <option>Canada</option>
+        <option>Australia</option>
+      </select>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="confirm">Confirm Password</label>
+      <input type="password" id="confirm" name="confirm" required>
+
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" required> I agree to the Terms & Conditions
+        </label>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+
+</html>
